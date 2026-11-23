@@ -1,0 +1,124 @@
+{
+ "global_param": [
+  3.0,
+  7,
+  false
+ ],
+ "fixed_per_subject": {
+  "SH": 5.898228222975624,
+  "BG": 5.7675103634540426,
+  "JY": 9.168931354808569,
+  "HJ": 5.227872100745514,
+  "ET": 8.123140770419539,
+  "JB": 10.012795344150451,
+  "JH": 9.721646673796133,
+  "JHL": 5.31435913682093,
+  "YW": 9.926071021661437,
+  "SJ": 6.573180669499041
+ },
+ "fixed_summary": {
+  "mean": 7.573373565833128,
+  "worst": 10.012795344150451,
+  "std": 1.9136680193617828
+ },
+ "loso": {
+  "SH": {
+   "sel": [
+    3.0,
+    7,
+    false
+   ],
+   "heldout_mae": 5.898228222975624,
+   "same_as_global": true
+  },
+  "BG": {
+   "sel": [
+    3.0,
+    7,
+    true
+   ],
+   "heldout_mae": 5.781084014584651,
+   "same_as_global": false
+  },
+  "JY": {
+   "sel": [
+    3.0,
+    7,
+    false
+   ],
+   "heldout_mae": 9.168931354808569,
+   "same_as_global": true
+  },
+  "HJ": {
+   "sel": [
+    3.0,
+    7,
+    false
+   ],
+   "heldout_mae": 5.227872100745514,
+   "same_as_global": true
+  },
+  "ET": {
+   "sel": [
+    3.0,
+    7,
+    false
+   ],
+   "heldout_mae": 8.123140770419539,
+   "same_as_global": true
+  },
+  "JB": {
+   "sel": [
+    3.0,
+    7,
+    false
+   ],
+   "heldout_mae": 10.012795344150451,
+   "same_as_global": true
+  },
+  "JH": {
+   "sel": [
+    3.0,
+    7,
+    false
+   ],
+   "heldout_mae": 9.721646673796133,
+   "same_as_global": true
+  },
+  "JHL": {
+   "sel": [
+    3.0,
+    7,
+    false
+   ],
+   "heldout_mae": 5.31435913682093,
+   "same_as_global": true
+  },
+  "YW": {
+   "sel": [
+    3.0,
+    7,
+    true
+   ],
+   "heldout_mae": 9.961857173882333,
+   "same_as_global": false
+  },
+  "SJ": {
+   "sel": [
+    3.0,
+    7,
+    true
+   ],
+   "heldout_mae": 6.629780608012185,
+   "same_as_global": false
+  }
+ },
+ "loso_summary": {
+  "mean_heldout": 7.583969540019593,
+  "worst_heldout": 10.012795344150451,
+  "std_heldout": 1.9139211199479815,
+  "folds_same_as_global": 7,
+  "n_folds": 10
+ },
+ "insample_pooled": 7.57337356583313
+}
