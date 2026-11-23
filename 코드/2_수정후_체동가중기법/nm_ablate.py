@@ -23,9 +23,9 @@ def interp_cells(x):
     v = np.zeros_like(out); v[1:] = np.diff(out, axis=0); return v
 def canon_dacm(d):
     a = 0.01; dd = d[:, AZ, :]; cl = lfilter([a], [1, -(1 - a)], dd[1:], axis=0); r = np.zeros_like(dd); r[1:] = dd[1:] - cl
-    rp = int(np.argmax(np.mean(np.abs(r), 1).mean(0))); dm = np.fft.fftshift(np.fft.fft(r, axis=1), 1)   # target cell fixed for the recording
-    dp = int(np.argmax(np.abs(dm[:, :, rp]).mean(0)))
-    ph = jv.dacm_phase_unwrapping(dm[:, dp, rp]); v = np.zeros((len(d), 1)); v[1:, 0] = np.diff(ph); return v
+    rp = np.argmax(np.mean(np.abs(r), 1), 1); rp[0] = 0; dm = np.fft.fftshift(np.fft.fft(r, axis=1), 1)
+    dp = np.array([0] + [int(np.argmax(np.abs(dm[i, :, rp[i]]))) for i in range(1, len(d))])
+    ph = jv.dacm_phase_unwrapping(dm[np.arange(len(d)), dp, rp]); v = np.zeros((len(d), 1)); v[1:, 0] = np.diff(ph); return v
 def mti_cells(d, lo=2, hi=6):
     r0 = centre_bin(d); bins = [r for r in range(r0 - lo, r0 + hi + 1) if 1 <= r <= 31]; dd = d[:, :, bins]
     a = 0.01; cl = lfilter([a], [1, -(1 - a)], dd[1:], axis=0); r = np.zeros_like(dd); r[1:] = dd[1:] - cl

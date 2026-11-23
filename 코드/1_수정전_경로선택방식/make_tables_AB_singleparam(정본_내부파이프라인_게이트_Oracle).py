@@ -48,14 +48,11 @@ def extract_gt(mhr):
 
 
 def extract_target(d):
-    """Target cell fixed for the whole recording.
-    range bin = argmax of the time-averaged, channel-averaged |MTI|;
-    angle bin = argmax of the time-averaged |angle FFT| at that range bin."""
-    rfft = MTI(d[:, AZ, :]); rm = np.mean(np.abs(rfft), 1)
-    rp = int(np.argmax(rm.mean(0)))
+    nF = d.shape[0]; rfft = MTI(d[:, AZ, :]); rm = np.mean(np.abs(rfft), 1)
+    rp = np.array([0] + [int(np.argmax(rm[i])) for i in range(1, nF)])
     dm = np.fft.fftshift(np.fft.fft(rfft, axis=1), 1)
-    dp = int(np.argmax(np.abs(dm[:, :, rp]).mean(0)))
-    return dm[:, dp, rp]
+    dp = np.array([0] + [int(np.argmax(np.abs(dm[i, :, rp[i]]))) for i in range(1, nF)])
+    return np.array([dm[i, dp[i], rp[i]] for i in range(nF)])
 
 
 def downsample_hr(e): return e[np.arange(0, len(e), radarFpsQ)][:-1]
