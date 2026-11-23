@@ -1,0 +1,95 @@
+check canonical gate/Impulse/Bypass/Detrend MAE: 7.573 7.717 12.271 10.413
+
+=== (1) configuration selected on the 5 design subjects: ('L40_p2.0_w161_cum', (0, 1, 0.5))
+-- DESIGN subjects n rec = 135
+Bypass                             MAE 13.34 RMSE 16.79 Worst 15.46 CondStd 1.49 | <=5 0.232 <=10 0.467 med 11.35 p90  29.3 | slope 0.04 corr 0.08 | within-subj slope  0.04 corr  0.04
+Detrend                            MAE 10.13 RMSE 12.65 Worst 11.38 CondStd 0.95 | <=5 0.309 <=10 0.593 med 8.56 p90  20.7 | slope 0.26 corr 0.40 | within-subj slope  0.20 corr  0.20
+Impulse                            MAE  7.79 RMSE 10.16 Worst  9.06 CondStd 0.74 | <=5 0.420 <=10 0.704 med 6.26 p90  17.1 | slope 0.26 corr 0.42 | within-subj slope  0.23 corr  0.25
+Gate (V1 proposed)                 MAE  8.57 RMSE 11.05 Worst 10.89 CondStd 1.13 | <=5 0.365 <=10 0.664 med 7.32 p90  18.0 | slope 0.47 corr 0.48 | within-subj slope  0.22 corr  0.18
+Constant 79                        MAE  8.26 RMSE 10.37 Worst 10.47 CondStd 1.20 | <=5 0.420 <=10 0.607 med 7.18 p90  16.6 | slope 0.00 corr 0.00 | within-subj slope  0.00 corr  0.00
+NEW (DEV config)                   MAE  3.70 RMSE  6.35 Worst  5.24 CondStd 0.86 | <=5 0.798 <=10 0.938 med 2.32 p90   6.7 | slope 0.77 corr 0.87 | within-subj slope  0.64 corr  0.70
+-- HELD-OUT subjects n rec = 135
+Bypass                             MAE 11.20 RMSE 14.25 Worst 12.45 CondStd 1.02 | <=5 0.321 <=10 0.541 med 9.01 p90  23.6 | slope 0.19 corr 0.40 | within-subj slope  0.06 corr  0.05
+Detrend                            MAE 10.70 RMSE 13.40 Worst 13.25 CondStd 1.94 | <=5 0.296 <=10 0.551 med 9.35 p90  22.2 | slope 0.22 corr 0.40 | within-subj slope  0.03 corr  0.02
+Impulse                            MAE  7.65 RMSE  9.93 Worst 10.83 CondStd 1.64 | <=5 0.437 <=10 0.694 med 6.29 p90  15.9 | slope 0.30 corr 0.56 | within-subj slope  0.09 corr  0.08
+Gate (V1 proposed)                 MAE  6.58 RMSE  8.59 Worst  8.39 CondStd 1.04 | <=5 0.506 <=10 0.775 med 4.94 p90  14.7 | slope 0.59 corr 0.72 | within-subj slope  0.33 corr  0.24
+Constant 79                        MAE  8.42 RMSE 10.99 Worst 10.73 CondStd 1.93 | <=5 0.467 <=10 0.647 med 5.43 p90  18.4 | slope 0.00 corr 0.00 | within-subj slope  0.00 corr  0.00
+NEW (DEV config)                   MAE  5.86 RMSE 12.59 Worst 11.19 CondStd 2.28 | <=5 0.805 <=10 0.872 med 2.17 p90  18.7 | slope 0.39 corr 0.43 | within-subj slope  0.17 corr  0.09
+
+=== (2) nested LOSO (configuration re-selected on the other 9 subjects in every fold)
+  fold SH ('L40_p2.0_w161_cum', (0, 1, 1))
+  fold BG ('L40_p2.0_w161_cum', (0, 1, 1))
+  fold JY ('L60_p2.0_w161_cum', (0.5, 1, 1))
+  fold HJ ('L40_p1.0_w161_cum', (0, 1, 1))
+  fold ET ('L40_p2.0_w161_cum', (0, 1, 1))
+  fold JB ('L40_p2.0_w161_cum', (0, 1, 1))
+  fold JH ('L40_p2.0_w161_cum', (0, 1, 1))
+  fold JHL ('L40_p2.0_w161_cum', (0, 1, 1))
+  fold YW ('L40_p2.0_w161_cum', (0, 1, 1))
+  fold SJ ('L40_p2.0_w161_cum', (0, 1, 1))
+Bypass                             MAE 12.27 RMSE 15.57 Worst 13.91 CondStd 1.03 | <=5 0.277 <=10 0.504 med 9.90 p90  26.7 | slope 0.12 corr 0.23 | within-subj slope  0.04 corr  0.05
+Detrend                            MAE 10.41 RMSE 13.03 Worst 12.13 CondStd 1.19 | <=5 0.302 <=10 0.572 med 8.88 p90  21.3 | slope 0.24 corr 0.40 | within-subj slope  0.14 corr  0.13
+Impulse                            MAE  7.72 RMSE 10.04 Worst  9.94 CondStd 1.00 | <=5 0.428 <=10 0.699 med 6.27 p90  16.7 | slope 0.28 corr 0.49 | within-subj slope  0.19 corr  0.19
+Gate (V1 proposed)                 MAE  7.57 RMSE  9.90 Worst  8.93 CondStd 0.80 | <=5 0.436 <=10 0.720 med 5.93 p90  16.7 | slope 0.53 corr 0.59 | within-subj slope  0.26 corr  0.20
+Constant 79                        MAE  8.34 RMSE 10.69 Worst  9.62 CondStd 1.32 | <=5 0.443 <=10 0.627 med 6.18 p90  18.1 | slope 0.00 corr 0.00 | within-subj slope  0.00 corr  0.00
+Constant (LOSO median)             MAE  8.83 RMSE 11.21 Worst 10.17 CondStd 1.39 | <=5 0.412 <=10 0.617 med 6.77 p90  18.9 | slope -0.05 corr -0.78 | within-subj slope  0.00 corr  0.00
+NEW (nested LOSO)                  MAE  4.82 RMSE  9.44 Worst  6.93 CondStd 1.25 | <=5 0.786 <=10 0.889 med 2.17 p90  11.1 | slope 0.55 corr 0.66 | within-subj slope  0.47 corr  0.38
+NEW (DEV config, all 270)          MAE  4.78 RMSE  9.97 Worst  7.30 CondStd 1.27 | <=5 0.801 <=10 0.905 med 2.24 p90   9.3 | slope 0.56 corr 0.63 | within-subj slope  0.49 corr  0.38
+-- same, PPG-waveform reference
+Impulse                            MAE  7.69 RMSE 10.01 Worst 10.06 CondStd 1.00 | <=5 0.442 <=10 0.705 med 5.95 p90  16.4 | slope 0.28 corr 0.49 | within-subj slope  0.19 corr  0.19
+Gate (V1 proposed)                 MAE  7.54 RMSE  9.89 Worst  8.92 CondStd 0.77 | <=5 0.452 <=10 0.722 med 5.78 p90  16.3 | slope 0.54 corr 0.60 | within-subj slope  0.28 corr  0.22
+NEW (nested LOSO)                  MAE  4.72 RMSE  9.46 Worst  6.90 CondStd 1.24 | <=5 0.796 <=10 0.891 med 1.99 p90  11.2 | slope 0.54 corr 0.66 | within-subj slope  0.46 corr  0.38
+
+=== (3) NEW (nested LOSO) minus baseline, subject-level bootstrap 95% CI (5000 resamples of the 10 subjects)
+  vs Gate (V1 proposed)   dMAE -2.76 [-4.74,+0.08]  dWorst -2.01 [-6.52,+3.03]  dCondStd +0.45 [-0.96,+1.99]  d(<=5) +0.351 [+0.222,+0.448] | subjects better 9/10, Wilcoxon p=0.0840
+  vs Impulse              dMAE -2.90 [-4.36,-1.27]  dWorst -3.02 [-6.48,+1.80]  dCondStd +0.25 [-0.92,+1.49]  d(<=5) +0.358 [+0.263,+0.444] | subjects better 9/10, Wilcoxon p=0.0137
+  vs Constant 79          dMAE -3.52 [-6.33,-1.22]  dWorst -2.70 [-6.56,+0.48]  dCondStd -0.07 [-1.19,+1.08]  d(<=5) +0.343 [+0.168,+0.516] | subjects better 8/10, Wilcoxon p=0.0195
+
+=== (4) strata (MAE): gate | Impulse | NEW nested LOSO
+per subject (ref BPM):
+  HJ   ref  65.1:  5.23 | 11.42 | 13.88   (<=5 0.47, bias +13.5) HOLD
+  ET   ref  69.5:  8.12 | 10.28 |  5.93   (<=5 0.62, bias +4.9) DEV
+  SJ   ref  74.5:  6.57 |  6.95 |  1.96   (<=5 0.95, bias +1.1) HOLD
+  BG   ref  78.7:  5.77 |  4.72 |  2.73   (<=5 0.89, bias +0.5) HOLD
+  SH   ref  79.7:  5.90 |  5.88 |  2.15   (<=5 0.89, bias +0.5) DEV
+  YW   ref  80.2:  9.93 |  3.95 |  3.64   (<=5 0.78, bias +1.2) DEV
+  JH   ref  80.3:  9.72 |  9.45 |  4.90   (<=5 0.81, bias -2.6) DEV
+  JHL  ref  82.4:  5.31 |  4.80 |  2.72   (<=5 0.91, bias -1.7) HOLD
+  JY   ref  94.5:  9.17 |  9.38 |  6.68   (<=5 0.75, bias -4.2) DEV
+  JB   ref  95.7: 10.01 | 10.34 |  3.57   (<=5 0.79, bias -1.5) HOLD
+per condition:
+  static           7.19 |  8.02 |  5.29
+  arm              7.92 |  8.21 |  6.41
+  head             7.62 |  7.71 |  5.09
+  cough            6.60 |  6.35 |  3.42
+  shoulder_shrug   8.93 |  9.94 |  4.17
+  disturb          7.08 |  6.90 |  2.97
+  swing            6.52 |  7.21 |  6.93
+  transition       7.54 |  6.91 |  3.89
+  water            8.75 |  8.20 |  5.19
+by motion intensity (ratio of impulse-detected samples; thesis Table 5-6 definition):
+  low     n=212  Bypass 11.13  Impulse  7.96  gate  8.14  NEW  5.06
+  medium  n=315  Bypass 10.97  Impulse  7.70  gate  7.47  NEW  5.20
+  high    n=283  Bypass 14.58  Impulse  7.56  gate  7.26  NEW  4.20
+by reference heart-rate tercile (recordings):
+  HR  69.1: gate  6.78  NEW  6.76 | bias gate +4.03 NEW +6.21
+  HR  79.0: gate  6.51  NEW  2.64 | bias gate +0.46 NEW +0.31
+  HR  92.1: gate  9.43  NEW  5.06 | bias gate -7.15 NEW -3.04
+by block (ends at 20/35/50 s): [(8.34, 5.23), (7.45, 4.47), (6.93, 4.75)]
+recordings with MAE > 15: gate 26 NEW 20
+
+=== (5) controls
+  estimates paired with another subject's reference: MAE 11.96 (range 10.03-13.24) vs true pairing 4.82
+  within-recording change (block 3 - block 1): corr(NEW, ref) 0.04, corr(gate, ref) 0.05 ; SD of ref change 3.5 BPM
+  distribution of NEW estimates: mean 81.2 sd 9.8 (reference mean 80.1 sd 10.6)
+
+=== (6) reference-free confidence (peak / highest value farther than 8 BPM): keep the most confident blocks
+  100%  NEW MAE  4.82  <=5 0.786  <=10 0.889 | gate on the same blocks  7.57
+   90%  NEW MAE  3.54  <=5 0.835  <=10 0.937 | gate on the same blocks  7.62
+   80%  NEW MAE  2.97  <=5 0.867  <=10 0.965 | gate on the same blocks  7.49
+   70%  NEW MAE  2.65  <=5 0.880  <=10 0.981 | gate on the same blocks  7.40
+   60%  NEW MAE  2.49  <=5 0.885  <=10 0.986 | gate on the same blocks  7.20
+   50%  NEW MAE  2.38  <=5 0.894  <=10 0.988 | gate on the same blocks  7.13
+   40%  NEW MAE  2.39  <=5 0.898  <=10 0.985 | gate on the same blocks  7.12
+   30%  NEW MAE  2.30  <=5 0.889  <=10 0.988 | gate on the same blocks  7.24
+  Spearman(confidence, error) = -0.31
